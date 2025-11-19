@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCB - Energy </title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Grupo<span>TCB</span></div>
+                <div class="menu-toggle">☰</div>
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#categorias">Categorías</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-icon">
+                    <span>🛒</span>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Catálogo</h1>
+            <p>Descubre nuestra amplia gama de paneles solares, convertidores y accesorios de alta calidad para tu hogar o negocio.</p>
+            <a href="#productos" class="btn">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- BARRA DE BÚSQUEDA -->
+    <div class="search-container">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Buscar productos...">
+            <button id="search-btn">🔍</button>
+        </div>
+    </div>
+
+    <!-- FILTROS POR CATEGORÍA -->
+    <div class="container">
+        <div class="category-filters">
+            <button class="filter-btn" data-category="todos">Todos</button>
+            <button class="filter-btn" data-category="paneles">Paneles Solares</button>
+            <button class="filter-btn" data-category="convertidores">Convertidores</button>
+            <button class="filter-btn" data-category="baterias">Baterías</button>
+            <button class="filter-btn" data-category="accesorios">Accesorios</button>
+            <button class="filter-btn active" data-category="todos">Otros</button>
+        </div>
+    </div>
+
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <section class="products" id="productos">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="product-grid" id="productos-container">
+                <!-- Los productos se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE DETALLES DEL PRODUCTO -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Detalles del Producto</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="Producto" class="modal-image" id="modal-image">
+                <div class="modal-details">
+                    <h3 id="modal-product-title">Nombre del Producto</h3>
+                    <p id="modal-description">Descripción del producto</p>
+                    <p id="modal-price" class="product-price">$0.00</p>
+                    <h4>Características:</h4>
+                    <ul class="modal-features" id="modal-features">
+                        <!-- Características se cargarán dinámicamente -->
+                    </ul>
+                    <div class="modal-actions">
+                        <a href="#" class="whatsapp-btn" id="whatsapp-link">
+                            <span>💬</span> Solicitar por WhatsApp
+                        </a>
+                        <button class="product-btn" id="close-modal-btn">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DEL CARRITO -->
+    <div class="modal" id="cart-modal">
+        <div class="cart-modal-content">
+            <div class="modal-header">
+                <h2>Tu Carrito de Compras</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div id="cart-items">
+                <!-- Los items del carrito se cargarán aquí -->
+            </div>
+            <div class="cart-total">
+                Total: $<span id="cart-total-price">0.00</span>
+            </div>
+            <div class="cart-actions">
+                <button class="btn" id="close-cart-modal">Seguir Comprando</button>
+                <a href="#" class="whatsapp-btn" id="whatsapp-cart">
+                    <span>💬</span> Enviar Pedido por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SolarTech</h3>
+                    <p>Soluciones de energía solar para hogares y empresas. Comprometidos con un futuro sostenible.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>Email: gabrielaprim02@yahho.com</p>
+                    <p>Teléfono: +5354973495</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">f</a>
+                        <a href="#" class="social-link">in</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#categorias">Categorías</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Grupo TCB. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
